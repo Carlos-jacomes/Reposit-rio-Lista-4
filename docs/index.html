@@ -27,7 +27,6 @@ proporcoes <- classificacao %>%
          ci = map(n, ~binom.test(.x, total_n)$conf.int),
          lower_ci = map_dbl(ci, 1),
          upper_ci = map_dbl(ci, 2))
-
 ```
 
 ```{r}
